@@ -1,8 +1,8 @@
 # lambda-example
 AWS Lambda Function Example
 
-https://serverless.com/examples/
-https://github.com/serverless/examples
+- https://serverless.com/examples/
+- https://github.com/serverless/examples
 
 
 ## Install example
@@ -16,7 +16,7 @@ You can now invoke the Lambda directly:
 
 ```bash
 serverless invoke local --function currentTime
-sls invoke local --function currentTime -d {msn: world}
+sls invoke local --function currentTime -p test/event.json
 ```
 
 ...even see the resulting log via

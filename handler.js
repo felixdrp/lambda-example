@@ -1,7 +1,11 @@
 'use strict';
 
 module.exports.endpoint = (event, context, callback) => {
-  const msg = event.msg || 'all';
+  // Event in string format?
+  const eventParsed = typeof event === "string" ? JSON.parse(event) : event;
+  // Welcome message
+  const msg = eventParsed.msg || 'all';
+
   const response = {
     statusCode: 200,
     body: JSON.stringify({
