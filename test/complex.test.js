@@ -1,4 +1,5 @@
 require('dotenv').config();
+const assert = require('assert');
 const chai = require('chai');
 const { complexTask } = require('../handler');
 const EVENT = require('./event.json');
@@ -36,7 +37,7 @@ describe("Example of complex function from a lambda function unit test.", () => 
             chai.expect(err).to.deep.equal('error 23');
             return;
         }
-        chai.expect(result).to.deep.equal(true);
+        assert.fail('It should enter previous catch');
         return;
     });
 });
