@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "description": "Example demonstrates how to setup a simple HTTP GET endpoint",
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^6.2.0"
+  }
 }

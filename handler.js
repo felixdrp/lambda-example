@@ -1,14 +1,20 @@
 'use strict';
 
+async function complexTask(data) {
+  // Imagine that this is a particularly complex or long code that could by nice to have an unit test.
+  const task = 21 + 21 + data;
+  // End of complex or long text.
+  return task;
+}
+module.exports.complexTask = complexTask;
+
 module.exports.endpoint = async (event, context) => {
   // Event in string format?
   const eventParsed = typeof event === "string" ? JSON.parse(event) : event;
   // Welcome message
   const msg = eventParsed.msg || 'all';
 
-  // Imagine that this is a particularly complex or long code that could by nice to have an unit test.
-  const complexResult = 21 + 21;
-  // End of complex or long text.
+  const complexResult = await complexTask();
 
   const response = {
     statusCode: 200,
