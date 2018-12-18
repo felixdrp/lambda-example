@@ -1,4 +1,4 @@
-# lambda-example
+# Lambda Function unit testing and debugging
 AWS Lambda Function Example
 
 - https://serverless.com/examples/
