@@ -15,7 +15,7 @@ sls install -u https://github.com/serverless/examples/tree/master/aws-node-simpl
 You can now invoke the Lambda directly:
 
 ```bash
-serverless invoke local --function currentTime
+serverless invoke local --function currentTime -p test/event.json
 sls invoke local --function currentTime -p test/event.json
 ```
 
