@@ -2,7 +2,8 @@
 
 async function complexTask(data) {
   const param = parseInt(data) || 0
-  if (data === 23) {
+  debugger
+  if (param === 23) {
     return Promise.reject('error ' + data);
   }
   // Imagine that this is a particularly complex or long code that could by nice to have an unit test.
